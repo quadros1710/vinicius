@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário com Exigências</title>
+</head>
+<body>
+
+<h2>Formulário</h2>
+
+<form action="/enviar" method="post">
+  <div>
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" name="nome" required minlength="10">
+  </div>
+  <div>
+    <label for="cpf">Digite seu CPF:</label>
+    <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+    <small>Formato esperado: 123.456.789-00</small>
+  </div>
+  <div>
+    <label for="cidade">Selecione sua cidade:</label>
+    <select id="cidade" name="cidade" required>
+      <option value="" disabled selected>Selecione uma cidade</option>
+      <option value="São Paulo">São Paulo</option>
+      <option value="Rio de Janeiro">Rio de Janeiro</option>
+      <option value="Belo Horizonte">Belo Horizonte</option>
+      <option value="Salvador">Salvador</option>
+      <option value="Brasília">Brasília</option>
+      <option value="Curitiba">Curitiba</option>
+      <option value="Fortaleza">Fortaleza</option>
+      <option value="Manaus">Manaus</option>
+      <option value="Recife">Recife</option>
+      <option value="Porto Alegre">Porto Alegre</option>
+    </select>
+  </div>
+  <div>
+    <label for="mensagem">Digite algo:</label>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
+  </div>
+  <div>
+    <input type="submit" value="Enviar">
+  </div>
+</form>
+
+</body>
+</html>
